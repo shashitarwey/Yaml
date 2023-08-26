@@ -1,0 +1,15 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<School>
+  <name>DPS</name>
+  <principal>Someone</principal>
+  <students>
+    <name>Shashi</name>
+    <rno>5</rno>
+    <marks>95</marks>
+  </students>
+  <students>
+    <name>Kuldeep</name>
+    <rno>6</rno>
+    <marks>95</marks>
+  </students>
+</School>

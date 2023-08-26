@@ -1,0 +1,59 @@
+# String Variables
+
+myself: !!str Shashi
+fruit: "mango"
+job: 'swe'
+
+# Storing Data in Multiple Lines
+bio: |
+My name is Shashi.
+I worked at Fynd as SDE.
+
+# write a single line in multiple lines
+message: >
+this will
+all be
+in one single line
+
+# same as
+message: this will all be in one single line
+
+---
+
+# Numbers and Boolean
+
+number: 2378
+float: 98.45
+booleanValue: No # n, N, false, False, FALSE 
+# same for true -> yes, y, Y
+
+# Specifying the Data Types
+
+# integers
+zero: !!int 0
+positiveNum: !!int 45
+negativenum: !!int -45
+binaryNumber: !!int 01001
+octalNum: !!int 06574
+hexaNum: !!int 0x45
+commaValue: !!int +540_000 # 540,000
+exponential numbers: 6.023E56
+
+# floating number
+
+marks: !!float 56.754
+infinity: !!float .infinity
+not a number: .nan
+boolValue: !!bool No
+
+# null
+surname: !!null Null # or null NULL ~
+~: this is used to represent null value
+
+# Dates and Times
+date (00:00:00Z): !!timestamp 2002-12-14
+India Time: 2001-12-15T02:59:43.10 +5:30
+valid iso8601:    2001-12-14t21:59:43.10-05:00
+space separated:  2001-12-14 21:59:43.10 -5
+no time zone (Z): 2001-12-15 2:59:43.10
+

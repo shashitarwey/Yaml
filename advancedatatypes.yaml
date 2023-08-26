@@ -1,0 +1,97 @@
+student: !!seq
+ - marks
+ - name
+ - roll_no
+
+# like this also
+cities: [new Delhi, Mumbai]
+
+# some of the keys of the sequence will be empty
+# known as sparse sequence
+
+sparse seq:
+ - hey
+ - how
+ -
+ - Null
+ - sup
+
+# nested sequence
+
+-
+ - mango
+ - banana
+ - apple
+-
+ - marks
+ - roll_no
+ - name
+
+# key value pairs
+
+!!map
+
+# nested mappings / nested objects
+
+name: !!map Shashi
+role: !!map 
+ age: 25
+ job: sde
+
+# pairs : keys may have duplicate values => In JSON it is like array of objects
+!!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+# same as 
+
+pair example: !!pairs [job: student, job: teacher]
+
+# unique values =>
+!!set
+
+names: !!set
+ ? Shashi
+ ? Kuldeep
+ ? Abhishek
+
+# dictionary
+!!omap
+
+people: !!map
+ - Shashi:
+    name: Shashikant
+    age: 23
+    height: 165
+ - Abhishek
+    name: Abhishke Goel
+    age: 20
+    height: 175
+
+# reusing some properties => using anchors
+
+likings: &likes
+ fave fruit: Mango
+ dislikes: grapes
+
+person1:
+ name: Shashikant
+ <<: *likes  # Accessing the anchors using *
+
+person2:
+ name: Abhishek
+ <<: *likes
+ dislikes: berries  # over riding the base value properties
+
+# After Over riding person2 Will be like this
+person2:
+  name: Abhishek
+  fave fruit: Mango
+  dislikes: berries
+
+
+person3:
+ name: Kuldeep
+ <<: *likes

@@ -1,0 +1,19 @@
+# objects
+"apple": "I am healthier"
+1: "I am first number"
+---
+# Lists
+- apple
+- mango
+- banana
+- Apple
+---
+cities:
+ - New Delhi
+ - Mumbai
+ - Banaras
+---
+cities: [mumbai, delhi, ranchi]
+---
+{mango: "yello fruit", age: 25}
+ ...
